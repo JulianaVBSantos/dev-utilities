@@ -10,9 +10,31 @@ Este repositório reúne pequenos utilitários criados durante o desenvolvimento
 
 ```text
 .
-│   conversor-csv-json.py
+│   README.md
 │
-├── maps
+├───comparativo
+│   ├───versao 1
+│   │       comparativo.c
+│   │       total.txt
+│   │       VerSeTem.txt
+│   │
+│   └───versao 2
+│           comparativoV2.c
+│           usuarios.txt
+│
+├───conversor
+│       conversor-csv-json.py
+│
+├───criar login i-manager
+│       GerarLoginI-Manager.c
+│       logins.txt
+│       nomes.txt
+│
+├───gerar senha
+│       GenPasswordLOL.c
+│       GenPasswordVava.c
+│
+├───maps
 │   │   gerar_coordenadas.py
 │   │   gerar_mapa.c
 │   │   mapa.html
@@ -21,71 +43,120 @@ Este repositório reúne pequenos utilitários criados durante o desenvolvimento
 │           lojas_com_coord.json
 │           lojas_exemplo.json
 │
+├───primários
+│   │   base.c
+│   │   ContadorCaracteres.c
+│   │   DetectarTecla.c
+│   │   entrada.txt
+│   │   mouse.c
+│   │   pixel.c
+│   │
+│   └───Correção do @
+│           CorrecaoCVS.c
+│           teste.c
+│
 └───tratamento-dados-ufs
-        associar_ufs.py
-        estados.json
-        municipios.json
-        municipios_com_estado.json
+    │   associar_ufs.py
+    │
+    └───data
+            estados.json
+            municipios.json
+            municipios_com_estado.json
 ```
 
 ## Ferramentas
-### Conversor CSV para JSON
 
-Arquivo:
+### Conversão e Tratamento de Dados
 
-```conversor-csv-json.py```
+#### Conversor CSV para JSON
+
+**Pasta** `conversor/`
 
 Realiza a conversão de arquivos CSV para JSON, facilitando a integração de dados com aplicações web, APIs e sistemas desktop.
 
-### Ferramentas de Mapas
+#### Tratamento de Dados de Estados e Municípios
 
-Pasta:
+**Pasta:** `tratamento-dados-ufs/`
 
-```maps/```
+Scripts utilizados para enriquecimento e organização de dados geográficos brasileiros.
 
-Utilitários relacionados a geolocalização e visualização de dados em mapas.
+**Principais recursos:**
 
-```gerar_coordenadas.py```
+* Associação de municípios aos respectivos estados;
+* Utilização de códigos oficiais do IBGE;
+* Geração de bases enriquecidas para consulta e processamento de dados.
 
-Obtém ou associa coordenadas geográficas aos registros de entrada.
+---
 
-```gerar_mapa.c```
+### Geolocalização e Mapas
 
-Gera um arquivo mapa.html para visualização geográfica em um mapa interativo.
+#### Ferramentas de Mapas
 
-## Tratamento de Dados de Estados e Municípios
+**Pasta:** `maps/`
 
-Pasta:
+Conjunto de utilitários para geolocalização e visualização de dados em mapas.
 
-```tratamento-dados-ufs/```
+**Principais recursos:**
 
-Scripts para enriquecimento e associação de dados geográficos brasileiros.
+* Associação de coordenadas geográficas;
+* Geração de arquivos para visualização cartográfica;
+* Criação de mapas interativos em HTML.
 
-```associar_ufs.py```
+---
 
-Relaciona municípios aos respectivos estados utilizando códigos oficiais.
+### Comparação e Validação de Dados
 
-Arquivos de dados:
+#### Comparador de Registros
 
-```
-estados.json
-municipios.json
-municipios_com_estado.json
-```
+**Pasta:** `comparativo/`
 
-## Projetos que Utilizam Estas Ferramentas
+Ferramenta desenvolvida para identificar divergências entre bases de dados e listas de usuários.
 
-As ferramentas deste repositório foram desenvolvidas para auxiliar a criação, manutenção e processamento de dados utilizados em outros projetos.
+**Principais recursos:**
 
-### Sistema Localizador Comercial
+* Localização de registros existentes;
+* Identificação de registros ausentes;
+* Comparação entre diferentes bases de dados;
+* Geração de relatórios para conferência.
 
-Projeto desktop desenvolvido em C e Qt para centralização e consulta de informações de lojas vinculadas à Casa do Militar.
+---
 
-Ferramentas utilizadas:
+### Gestão de Usuários
 
-- Conversão de bases de dados CSV para JSON;
-- Associação de municípios aos respectivos estados;
-- Enriquecimento de dados geográficos com coordenadas;
-- Geração e validação de mapas para visualização das informações.
+#### Gerador de Logins
 
-O objetivo é manter os utilitários desacoplados do projeto principal, permitindo sua reutilização em outros sistemas e facilitando a manutenção das ferramentas de processamento de dados.
+**Pasta:** `criar login i-manager/`
+
+Automatiza a criação de logins a partir de listas de nomes, reduzindo trabalho manual em processos de cadastro.
+
+#### Geradores de Senha
+
+**Pasta:** `gerar senha/`
+
+Ferramentas para geração automatizada de senhas destinadas a diferentes cenários de utilização.
+
+---
+
+### Manipulação de Arquivos e Automação
+
+#### Utilitários Diversos
+
+**Pasta:** `primários/`
+
+Coleção de programas experimentais e ferramentas auxiliares utilizadas em estudos, testes e automações.
+
+**Inclui exemplos como:**
+
+* Manipulação de arquivos texto;
+* Contagem de caracteres;
+* Detecção de teclas;
+* Captura de informações do mouse;
+* Leitura de pixels da tela;
+* Tratamento e correção de arquivos CSV;
+* Testes de entrada e saída de dados.
+
+---
+
+## Objetivo
+
+Este repositório reúne ferramentas auxiliares criadas ao longo do desenvolvimento de diferentes projetos. Os programas são independentes entre si e têm como objetivo automatizar tarefas repetitivas, processar dados, validar informações e acelerar atividades de desenvolvimento.
