@@ -33,7 +33,7 @@ Este repositório reúne pequenos utilitários criados durante o desenvolvimento
 
 Arquivo:
 
-conversor-csv-json.py
+```conversor-csv-json.py```
 
 Realiza a conversão de arquivos CSV para JSON, facilitando a integração de dados com aplicações web, APIs e sistemas desktop.
 
@@ -61,11 +61,12 @@ Pasta:
 
 Scripts para enriquecimento e associação de dados geográficos brasileiros.
 
-associar_ufs.py
+```associar_ufs.py```
 
 Relaciona municípios aos respectivos estados utilizando códigos oficiais.
 
 Arquivos de dados:
+
 ```
 estados.json
 municipios.json
